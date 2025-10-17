@@ -1,0 +1,19 @@
+<div class="timeline">
+  <div class="followings half">
+    <h2>팔로잉 목록</h2>
+    <% if (user && user.Followings && user.Followings.length > 0) { %>
+      <% user.Followings.forEach(following => { %>
+        <div><%= following.nick %></div>
+      <% }) %>
+    <% } %>
+  </div>
+
+  <div class="followers half">
+    <h2>팔로워 목록</h2>
+    <% if (user && user.Followers && user.Followers.length > 0) { %>
+      <% user.Followers.forEach(follower => { %>
+        <div><%= follower.nick %></div>
+      <% }) %>
+    <% } %>
+  </div>
+</div>
